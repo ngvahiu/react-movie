@@ -1,0 +1,51 @@
+#news {
+  .news-top {
+    &:hover {
+      scale: 1.1;
+
+      h1 {
+        color: #ff0000;
+      }
+    }
+  }
+  .news-bottom {
+    &:hover {
+      scale: 1.1;
+
+      h1 {
+        color: #ff0000;
+      }
+    }
+  }
+}
+
+//responsive mobile-width
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  #news {
+    .news-top {
+      img {
+        height: 100px;
+      }
+      h1 {
+        font-size: 0.6rem;
+      }
+      p {
+        display: none;
+      }
+    }
+    .news-bottom {
+      img {
+        height: 70px;
+      }
+      h1 {
+        font-size: 0.4rem;
+      }
+      p {
+        display: none;
+      }
+    }
+    .ant-tabs .ant-tabs-tab-btn {
+        font-size: 0.6rem;
+    }
+  }
+}

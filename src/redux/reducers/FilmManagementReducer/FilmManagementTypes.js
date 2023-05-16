@@ -1,0 +1,2 @@
+export const SET_FILM_LIST = 'SET_FILM_LIST';
+export const SET_DETAILS_FILM = 'SET_DETAILS_FILM';

@@ -1,0 +1,2 @@
+export const SHOW_TRAILER = 'SHOW_TRAILER';
+export const HIDE_TRAILER = 'HIDE_TRAILER';

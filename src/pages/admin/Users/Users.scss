@@ -1,0 +1,10 @@
+.ant-input-search
+  > .ant-input-group
+  > .ant-input-group-addon:last-child
+  .ant-input-search-button {
+  background-color: #ff0000;
+  transition: all 0.5s;
+  &:hover {
+    background-color: #000;
+  }
+}

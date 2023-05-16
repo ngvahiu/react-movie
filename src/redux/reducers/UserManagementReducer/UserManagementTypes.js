@@ -1,0 +1,5 @@
+export const GET_USER_LIST = 'GET_USER_LIST';
+export const OPEN_USER_MODAL = 'OPEN_USER_MODAL';
+export const CLOSE_USER_MODAL = 'CLOSE_USER_MODAL';
+export const SET_INFOR_EDIT = 'SET_INFOR_EDIT';
+export const RESET_INFOR_EDIT = 'RESET_INFOR_EDIT';

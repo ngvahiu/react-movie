@@ -1,0 +1,14 @@
+//responsive mobile-width
+@media screen and (min-width: 320px) and (max-width: 415px) {
+  .text-fixed-1 {
+    font-size: 8px;
+    line-height: 1rem;
+  }
+  .text-fixed-2 {
+    font-size: 6px;
+    line-height: 0.6rem;
+  }
+  .film-image {
+    height: 80%;
+  }
+}

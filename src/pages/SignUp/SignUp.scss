@@ -1,0 +1,10 @@
+.form-signup {
+  width: 100%;
+}
+
+//responsive mobile-width
+@media screen and (min-width: 320px) and (max-width: 415px) {
+  .form-signup {
+    width: 80%;
+  }
+}

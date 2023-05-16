@@ -1,0 +1,14 @@
+.selection-bar {
+  width: 60%;
+}
+
+.ant-select-item-option-content {
+  font-weight: 900;
+}
+
+//responsive mobile-width
+@media screen and (min-width: 320px) and (max-width: 414px) {
+  .selection-bar {
+    width: 95%;
+  }
+}

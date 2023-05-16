@@ -1,0 +1,80 @@
+.screen {
+  width: 70%;
+  height: 15px;
+}
+.trapezoid {
+  width: 70%;
+  height: 50px;
+  transform: perspective(5px) rotateX(1deg);
+  background: linear-gradient(
+    180deg,
+    rgba(210, 208, 210, 0.8) 30%,
+    rgba(210, 208, 210, 0.6) 75%,
+    rgba(210, 208, 210, 0.4) 85%,
+    rgba(210, 208, 210, 0.2) 95%,
+    rgba(210, 208, 210, 0.1) 100%
+  );
+}
+.form {
+  width: 70%;
+}
+//responsive ipad-width
+@media screen and (min-width: 415.02px) and (max-width: 689.98px) {
+  .screen {
+    width: 90%;
+    height: 8px;
+  }
+  .trapezoid {
+    width: 90%;
+    height: 40px;
+  }
+  .form {
+    width: 90%;
+  }
+}
+
+//responsive mobile-width
+@media screen and (min-width: 345px) and (max-width: 415px) {
+  .screen {
+    width: 90%;
+    height: 8px;
+  }
+  .trapezoid {
+    width: 90%;
+    height: 40px;
+  }
+  .step {
+    font-size: 8px;
+  }
+  .seat {
+    font-size: 8px;
+  }
+  .form {
+    width: 90%;
+  }
+  .total {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 344.98px) {
+  .screen {
+    width: 90%;
+    height: 8px;
+  }
+  .trapezoid {
+    width: 90%;
+    height: 40px;
+  }
+  .step {
+    font-size: 7px;
+  }
+  .seat {
+    font-size: 7px;
+  }
+  .form {
+    width: 90%;
+  }
+  .total {
+    font-size: 1.7rem;
+  }
+}

@@ -1,0 +1,14 @@
+.button-movie {
+  background-color: #ff000f;
+}
+
+.button-movie:hover {
+  background-color: #000;
+}
+
+//responsive mobile-width
+@media screen and (min-width: 320px) and (max-width: 640px) {
+    .button-movie {
+        font-size: 0.6rem !important;
+    }
+}
