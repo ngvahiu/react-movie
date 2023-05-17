@@ -56,16 +56,17 @@ function SignUp({ purpose }) {
 export default SignUp
 
 function FormSignUp({ purpose }) {
-    const { userSignUp, isLoading, error } = useSelector(state => state.UserReducer);
+    const { userSignUp, isLoading, error, successEditInfor } = useSelector(state => state.UserReducer);
     const [isShowPass, setIsShowPass] = useState(false);
     const dispatch = useDispatch();
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const information = JSON.parse(localStorage.getItem(INFORMATION)) || null;
 
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors }
     } = useForm({
         defaultValues: {
@@ -94,17 +95,15 @@ function FormSignUp({ purpose }) {
         }
 
         if (purpose === EDIT_ACTION) {
-            await dispatch(editInformationAction({ ...payload, maLoaiNguoiDung: information?.maLoaiNguoiDung }));
+            await dispatch(editInformationAction({ ...payload, maLoaiNguoiDung: information?.maLoaiNguoiDung, resetFormFunc: reset }));
 
             //cập nhật lại USER_LOGIN trong localStorage bằng action đăng nhập
             await dispatch(SignInAction({
                 taiKhoan: values?.taiKhoan,
                 matKhau: values?.matKhau
-            }))
-
-            navigate(`/profile/${information.taiKhoan}`, { replace: true });
+            }));
         } else {
-            await dispatch(SignUpAction(payload));
+            dispatch(SignUpAction(payload));
         }
     }
 
@@ -122,7 +121,6 @@ function FormSignUp({ purpose }) {
                 confirmButtonColor: '#ff0000'
             })
         } else {
-            console.log('error');
             Swal.fire({
                 icon: 'error',
                 title: 'Edit profile failed.',

@@ -38,8 +38,20 @@ export const getInformationAction = createAsyncThunk(GET_INFORMATION, async () =
 
 export const editInformationAction = createAsyncThunk(EDIT_INFORMATION, async (values) => {
     try {
+        const { resetFormFunc } = values;
+        delete values.resetFormFunc;
+
         const { content: information } = await editInforAccountAPI(values);
 
+        //reset edit-information form
+        resetFormFunc({
+            taiKhoan: "",
+            matKhau: "",
+            confirmMatKhau: "",
+            hoTen: "",
+            email: "",
+            soDT: ""
+        });
         return information;
     } catch (error) {
         throw error.response?.data?.content;
