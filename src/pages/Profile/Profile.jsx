@@ -17,11 +17,7 @@ function Profile() {
     }, [])
 
     return (
-        <div className='py-5 flex justify-center profile-tabs' style={{
-            backgroundImage: `url(${require("../../assets/background-1.jpg")})`,
-            backgroundPosition: 'center',
-            backgroundSize: '100% 100%'
-        }}>
+        <div className='pt-10 py-5 flex justify-center profile-tabs' style={{width: '80%'}}>
             <Tabs className='bg-white bg-opacity-30 p-4 tabs-profile' defaultActiveKey={profileTab} items={[
                 {
                     key: 1,
@@ -44,8 +40,8 @@ function ProfileContent({ information }) {
     const navigate = useNavigate();
 
     return (
-        <div className='flex justify-center items-center'>
-            <table class="table-auto bg-white bg-opacity-40" style={{ width: '80%' }}>
+        <div className='flex justify-center items-center h-full'>
+            <table class="table-auto bg-white bg-opacity-40 sm:py-2 py-1" style={{ width: '80%' }}>
                 <thead>
                     <tr>
                         <td className='text-center font-bold text-fixed-4'>Name</td>
@@ -75,7 +71,7 @@ function ProfileContent({ information }) {
                         <td></td>
                         <td className='text-right py-3'>
                             <ButtonMovie type={'button'} px={8} py={2} rounded={'lg'} handleClick={() => {
-                                navigate(`/profile/${information?.taiKhoan}/edit`);
+                                navigate(`/user/profile/${information?.taiKhoan}/edit`);
                             }}>
                                 Edit
                             </ButtonMovie>
@@ -120,7 +116,7 @@ function BookingHistoryContent({ bookingInformation }) {
         })
     }
     return (
-        <div className='p-3 flex justify-center'>
+        <div className='sm:p-3 flex justify-center'>
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-3">
                 {renderBookingInformation()}
             </div>

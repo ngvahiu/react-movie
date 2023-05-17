@@ -9,7 +9,7 @@ function AdminRoute({ children }) {
 
     //nếu chưa đăng nhập, điều hướng về trang đăng nhập
     if (!user) {
-        return <Navigate to='/signin' />
+        return <Navigate to='/user/signin' />
     }
     //nếu không là admin thì không có quyền truy cập, back về trang home
     if (user && user.maLoaiNguoiDung !== "QuanTri") {

@@ -8,7 +8,7 @@ function ProtectedRoute({ children }) {
 
     //nếu chưa đăng nhập, điều hướng về trang đăng nhập (kèm với url của trang seats vừa truy cập)
     if (!user) {
-        return <Navigate to={`/signin?redirectUrl=${pathname}`} replace />
+        return <Navigate to={`/user/signin?redirectUrl=${pathname}`} replace />
     }
     return children;
 }

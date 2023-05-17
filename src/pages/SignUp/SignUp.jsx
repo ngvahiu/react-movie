@@ -141,12 +141,12 @@ function FormSignUp({ purpose }) {
         })
         dispatch(resetSignUp());
 
-        return <Navigate to='/signin' replace />;
+        return <Navigate to='/user/signin' replace />;
     }
 
     return (
         <div className="max-w-md p-8 space-y-3 rounded-xl bg-white form-signup">
-            <h1 className="text-2xl font-bold text-center">Sign Up</h1>
+            <h1 className="text-2xl font-bold text-center">{purpose === SIGN_UP_ACTION ? 'Sign Up' : 'Edit Profile'}</h1>
             <form novalidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid" onSubmit={handleSubmit(onSubmit, onErrors)}>
                 <div className="space-y-1 text-sm">
                     <label for="username" className="block text-black font-bold sm:text-base text-xs">Username</label>

@@ -22,7 +22,7 @@ function Footer() {
   }
 
   return (
-    <footer className="footer" style={{ backgroundColor: '#272829' }}>
+    <footer className="footer" style={{ backgroundColor: '#272829'}}>
       <div className='xl:container xl:mx-auto lg:mx-8 mx-5 py-12 grid lg:grid-cols-4 lg:gap-0 grid-cols-2 gap-5'>
         <div className='col-span-1'>
           <div className='footer-logo mb-5 w-4/5'>

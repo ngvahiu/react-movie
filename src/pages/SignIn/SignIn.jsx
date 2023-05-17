@@ -138,7 +138,7 @@ function FormSignIn() {
       <p className="text-xs text-center sm:px-6">Don't have an account?
         <a rel="noopener noreferrer" href="#" className="underline text-gray-700 font-bold cursor-pointer hover:text-red-600 transition-all duration-500" onClick={() => {
           dispatch(resetSignUp());
-          navigate('/signup')
+          navigate('/user/signup')
         }}>Sign up</a>
       </p>
     </div>

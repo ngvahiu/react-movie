@@ -10,6 +10,7 @@ import { EDIT_ACTION, SIGN_UP_ACTION } from './util/settings/Config';
 // import Home from './pages/Home/Home';
 // import Detail from './pages/Detail/Detail';
 // import Seats from './pages/Seats/Seats';
+// import UserTemplate from './templates/UserTemplate/UserTemplate';
 // import SignIn from './pages/SignIn/SignIn';
 // import SignUp from './pages/SignUp/SignUp';
 // import AdminTemplate from './templates/AdminTemplate/AdminTemplate';
@@ -24,6 +25,7 @@ const HomeTemplate = lazy(() => import('./templates/HomeTemplate/HomeTemplate'))
 const Home = lazy(() => import('./pages/Home/Home'));
 const Detail = lazy(() => import('./pages/Detail/Detail'));
 const Seats = lazy(() => import('./pages/Seats/Seats'));
+const UserTemplate = lazy(() => import('./templates/UserTemplate/UserTemplate'));
 const SignIn = lazy(() => import('./pages/SignIn/SignIn'));
 const SignUp = lazy(() => import('./pages/SignUp/SignUp'));
 const AdminTemplate = lazy(() => import('./templates/AdminTemplate/AdminTemplate'));
@@ -47,6 +49,10 @@ function App() {
                 <Seats />
               </ProtectedRoute>}
             />
+          </Route>
+        </Routes>
+        <Routes>
+          <Route path='/user' element={<UserTemplate />} >
             <Route path='signin' element={<SignIn />} />
             <Route path='signup' element={<SignUp purpose={SIGN_UP_ACTION} />} />
             <Route path='profile/:account' element={<Profile />} />

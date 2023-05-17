@@ -54,13 +54,13 @@ function Header() {
                         </Dropdown.Item>
                         <Dropdown.Item className={styles['MenuItem']} onClick={async () => {
                             await dispatch(changeTab(1));
-                            navigate(`/profile/${userLogin?.taiKhoan}`);
+                            navigate(`/user/profile/${userLogin?.taiKhoan}`);
                         }}>
                             <i className="fa fa-user mr-2"></i> Profile
                         </Dropdown.Item>
                         <Dropdown.Item className={styles['MenuItem']} onClick={async () => {
                             await dispatch(changeTab(2));
-                            navigate(`/profile/${userLogin?.taiKhoan}`);
+                            navigate(`/user/profile/${userLogin?.taiKhoan}`);
                         }}>
                             <i className="fa fa-history mr-2"></i> Booking history
                         </Dropdown.Item>
@@ -101,13 +101,13 @@ function Header() {
                     </Dropdown> : <div className='grid grid-cols-2'>
                         <button className='text-white border border-y-0 border-l-0 border-r-1 md:px-2 px-1 transition-all duration-500 hover:text-orange-500 cursor-pointer md:text-base text-xs' onClick={() => {
                             dispatch(resetSignUp());
-                            navigate('/signin')
+                            navigate('/user/signin')
                         }}>
                             <i className="fa fa-user mx-1"></i> Sign in
                         </button>
                         <button className='text-white md:px-2 px-1 transition-all duration-500 hover:text-orange-500 cursor-pointer md:text-base text-xs' onClick={() => {
                             dispatch(resetSignUp());
-                            navigate('/signup')
+                            navigate('/user/signup')
                         }}>
                             <i className="fa fa-user mx-1"></i> Sign up
                         </button>

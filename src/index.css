@@ -6,11 +6,19 @@
   font-family: "Roboto", sans-serif;
 }
 
+html,
 body {
   margin: 0;
   padding: 0;
   position: relative;
   font-size: 16px;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
 }
 
 .swiper {

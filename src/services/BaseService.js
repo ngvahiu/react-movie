@@ -30,7 +30,7 @@ axios.interceptors.response.use(
             localStorage.removeItem(USER_LOGIN);
             localStorage.removeItem(TOKEN);
 
-            window.location.href = "/signin";
+            window.location.href = "/user/signin";
         }
     }
 );
