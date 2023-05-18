@@ -20,6 +20,7 @@ import { EDIT_ACTION, SIGN_UP_ACTION } from './util/settings/Config';
 // import AdminShowtime from './pages/admin/Showtime/AdminShowtime'
 // import AdminUserManagement from './pages/admin/Users/AdminUserManagement';
 // import Profile from './pages/Profile/Profile';
+// import PageNotFound from './components/PageNotFound/PageNotFound';
 
 const HomeTemplate = lazy(() => import('./templates/HomeTemplate/HomeTemplate'));
 const Home = lazy(() => import('./pages/Home/Home'));
@@ -35,6 +36,7 @@ const EditFilm = lazy(() => import('./pages/admin/Films/EditFilm/EditFilm'));
 const AdminShowtime = lazy(() => import('./pages/admin/Showtime/AdminShowtime'));
 const AdminUserManagement = lazy(() => import('./pages/admin/Users/AdminUserManagement'));
 const Profile = lazy(() => import('./pages/Profile/Profile'));
+const PageNotFound = lazy(() => import('./components/PageNotFound/PageNotFound'));
 
 function App() {
   return (
@@ -72,6 +74,7 @@ function App() {
             <Route path='films/editfilm/:id' element={<EditFilm />} />
             <Route path='films/showtime/:id' element={<AdminShowtime />} />
           </Route>
+          <Route path='*' element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </Suspense>
