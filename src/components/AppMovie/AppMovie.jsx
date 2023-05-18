@@ -52,12 +52,12 @@ function AppMovie() {
                     <div className='relative flex justify-center items-center lg:h-[600px] md:h-[500px] h-[400px]' style={{
                         width: '50%'
                     }}>
-                        <img className='h-full w-full' src={require("../../assets/phone.png")} alt='phone frame' />
+                        <img className='h-full' src={require("../../assets/phone.png")} alt='phone frame' style={{ width: '80%' }} />
                         <img className='absolute rounded-3xl' src={require("../../assets/app.jpg")} alt='app' style={{
                             height: '95%',
-                            top: ' 2.5%',
-                            left: ' 3%',
-                            width: '94%',
+                            top: '2.5%',
+                            left: '12%',
+                            width: '76%'
                         }} />
                     </div>
                 </Animated>

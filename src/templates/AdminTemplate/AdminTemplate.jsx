@@ -16,17 +16,7 @@ const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
 
 function AdminTemplate() {
-    return (
-        <div>
-            <MyHeader />
-
-            <div style={{ paddingTop: '60px' }}>
-                <LayoutAdmin />
-            </div>
-
-            <MyFooter />
-        </div>
-    )
+    return <LayoutAdmin />
 }
 
 export default AdminTemplate
@@ -35,11 +25,7 @@ const LayoutAdmin = (props) => {
     const [collapsed, setCollapsed] = useState(false);
     const dispatch = useDispatch();
     return (
-        <Layout
-            style={{
-                minHeight: '80vh',
-            }}
-        >
+        <Layout>
             <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
                 <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" >
                     <SubMenu key={1} icon={<UserOutlined />} title="Users">

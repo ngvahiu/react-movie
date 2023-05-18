@@ -8,17 +8,12 @@ function UserTemplate() {
         backgroundImage: `url(${require("../../assets/background-1.jpg")})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
-        minHeight: '100vh'
+        minHeight: '60vh'
     }}>
-        <Header />
-
         {/* render child components here */}
-        <div className='flex justify-center items-center' style={{ paddingTop: '60px' }}>
+        <div className='flex justify-center items-center'>
             <Outlet />
         </div>
-        {/* <Outlet /> */}
-
-        <Footer />
     </div>
 }
 

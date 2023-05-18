@@ -285,7 +285,7 @@ export default function HorizontalLinearStepper() {
     }
 
     return (
-        <div className='bg-white py-5'>
+        <div className='bg-white py-5' style={{minHeight: '75vh'}}>
             <ColumnsGrid hinhAnh={ticketList?.thongTinPhim?.hinhAnh} tenCumRap={ticketList?.thongTinPhim?.tenCumRap} diaChi={ticketList?.thongTinPhim?.diaChi} tenRap={ticketList?.thongTinPhim?.tenRap} ngayChieu={ticketList?.thongTinPhim?.ngayChieu} gioChieu={ticketList?.thongTinPhim?.gioChieu} />
 
             <div className="container mx-auto mt-5 mb-12">

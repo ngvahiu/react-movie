@@ -1,6 +1,6 @@
 import './App.css';
 import { lazy, Suspense } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Loading from './components/Loading/Loading';
 import ProtectedRoute from './components/Routes/ProtectedRoute';
 import AdminRoute from './components/Routes/AdminRoute';
@@ -43,6 +43,7 @@ function App() {
     <Suspense fallback={<Loading />}>
       <BrowserRouter>
         <Routes>
+          <Route path="*" element={<PageNotFound />} />
           <Route path='/' element={<HomeTemplate />} >
             <Route index element={<Home />} />
             <Route path='detail/:id' element={<Detail />} />
@@ -51,30 +52,25 @@ function App() {
                 <Seats />
               </ProtectedRoute>}
             />
+            <Route path='/user' element={<UserTemplate />} >
+              <Route path='signin' element={<SignIn />} />
+              <Route path='signup' element={<SignUp purpose={SIGN_UP_ACTION} />} />
+              <Route path='profile/:account' element={<Profile />} />
+              <Route path='profile/:account/edit' element={<SignUp purpose={EDIT_ACTION} />} />
+            </Route>
+            <Route path='/admin' element={
+              <AdminRoute>
+                <AdminTemplate />
+              </AdminRoute>
+            } >
+              <Route index element={<AdminUserManagement />} />
+              <Route path='users' element={<AdminUserManagement />} />
+              <Route path='films' element={<AdminFilmManagement />} />
+              <Route path='films/addnewfilm' element={<AddNewFilm />} />
+              <Route path='films/editfilm/:id' element={<EditFilm />} />
+              <Route path='films/showtime/:id' element={<AdminShowtime />} />
+            </Route>
           </Route>
-        </Routes>
-        <Routes>
-          <Route path='/user' element={<UserTemplate />} >
-            <Route path='signin' element={<SignIn />} />
-            <Route path='signup' element={<SignUp purpose={SIGN_UP_ACTION} />} />
-            <Route path='profile/:account' element={<Profile />} />
-            <Route path='profile/:account/edit' element={<SignUp purpose={EDIT_ACTION} />} />
-          </Route>
-        </Routes>
-        <Routes>
-          <Route path='/admin' element={
-            <AdminRoute>
-              <AdminTemplate />
-            </AdminRoute>
-          } >
-            <Route path='' element={<AdminUserManagement />} />
-            <Route path='users' element={<AdminUserManagement />} />
-            <Route path='films' element={<AdminFilmManagement />} />
-            <Route path='films/addnewfilm' element={<AddNewFilm />} />
-            <Route path='films/editfilm/:id' element={<EditFilm />} />
-            <Route path='films/showtime/:id' element={<AdminShowtime />} />
-          </Route>
-          <Route path='*' element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </Suspense>
