@@ -1,6 +1,4 @@
 import React from 'react';
-import MyHeader from '../HomeTemplate/Layout/Header/Header';
-import MyFooter from '../HomeTemplate/Layout/Footer/Footer';
 import { NavLink, Outlet } from 'react-router-dom';
 import {
     PlusOutlined,

@@ -1,7 +1,5 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import Header from '../HomeTemplate/Layout/Header/Header'
-import Footer from '../HomeTemplate/Layout/Footer/Footer'
 
 function UserTemplate() {
     return <div className='flex flex-col justify-between' style={{
