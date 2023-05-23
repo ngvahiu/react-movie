@@ -10,6 +10,7 @@ import { Layout, Menu } from 'antd';
 import { useState } from 'react';
 import { OPEN_USER_MODAL } from '../../redux/reducers/UserManagementReducer/UserManagementTypes';
 import { useDispatch } from 'react-redux';
+import { ADD_ACTION } from '../../util/settings/Config';
 const { Header, Content, Sider } = Layout;
 const { SubMenu } = Menu;
 
@@ -31,7 +32,7 @@ const LayoutAdmin = (props) => {
                             <NavLink to="/admin/users">Users list</NavLink>
                         </Menu.Item>
                         <Menu.Item key="12" icon={<PlusOutlined />} onClick={() => {
-                            dispatch({ type: OPEN_USER_MODAL, purpose: 'add' })
+                            dispatch({ type: OPEN_USER_MODAL, purpose: ADD_ACTION })
                         }}>
                             <NavLink to="/admin/users">Add new user</NavLink>
                         </Menu.Item>
